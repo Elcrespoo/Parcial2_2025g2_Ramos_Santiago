@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize animations
   initScrollAnimations()
   initNavbarScroll()
-  initFormValidation()
 
   // Add loading animation to elements
   const elements = document.querySelectorAll(".loading")
@@ -47,44 +46,6 @@ function initNavbarScroll() {
       navbar.style.backgroundColor = "var(--primary-color)"
     }
   })
-}
-
-// Form validation
-function initFormValidation() {
-  const forms = document.querySelectorAll(".needs-validation")
-
-  forms.forEach((form) => {
-    form.addEventListener("submit", (event) => {
-      if (!form.checkValidity()) {
-        event.preventDefault()
-        event.stopPropagation()
-      } else {
-        event.preventDefault()
-        showSuccessMessage()
-      }
-
-      form.classList.add("was-validated")
-    })
-  })
-}
-
-// Show success message
-function showSuccessMessage() {
-  const alert = document.createElement("div")
-  alert.className = "alert alert-success alert-dismissible fade show position-fixed"
-  alert.style.top = "100px"
-  alert.style.right = "20px"
-  alert.style.zIndex = "9999"
-  alert.innerHTML = `
-        <strong>¡Mensaje enviado!</strong> Nos pondremos en contacto contigo pronto.
-        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-    `
-
-  document.body.appendChild(alert)
-
-  setTimeout(() => {
-    alert.remove()
-  }, 5000)
 }
 
 // Smooth scrolling for anchor links

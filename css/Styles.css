@@ -263,3 +263,70 @@ body.dark-mode {
   background-color: var(--dark-color);
   color: var(--light-color);
 }
+.social-icons a {
+  color: #333;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #007bff; /* color azul al pasar el mouse */
+}
+footer {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  text-align: center;
+  }
+  /* Contact page cards */
+.contact-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+}
+.contact-card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Portfolio overlay */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(37, 99, 235, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.card:hover .card-overlay {
+  opacity: 1;
+}
+.overlay-content {
+  text-align: center;
+}
+.bg-purple {
+  background-color: #8b5cf6 !important;
+}
+.tech-stack .badge {
+  font-size: 0.75rem;
+}
+.project-stats {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 0.75rem;
+}
+footer .social-links a {
+  transition: var(--transition);
+}
+footer .social-links a:hover {
+  color: var(--accent-color) !important;
+  transform: translateY(-3px);
+}

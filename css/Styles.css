@@ -330,3 +330,22 @@ footer .social-links a:hover {
   color: var(--accent-color) !important;
   transform: translateY(-3px);
 }
+img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+/* Animación fade-in para imágenes */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-animate.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
